@@ -1,0 +1,18 @@
+[GLOBAL]
+pants_version = "2.11.0"
+
+backend_packages = [
+    "pants.backend.python",
+    "pants.backend.docker",
+]
+
+[python]
+interpreter_constraints = ["CPython==3.9.*"]
+enable_resolves = true
+lockfile_generator = "pex"
+
+[source]
+root_patterns = ["/packages"]
+
+[docker]
+default_repository = "{parent_directory}/{name}"
