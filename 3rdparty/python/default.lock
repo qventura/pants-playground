@@ -10,7 +10,8 @@
 //   ],
 //   "generated_with_requirements": [
 //     "Flask>=2.1.0",
-//     "gunicorn"
+//     "gunicorn",
+//     "uvicorn"
 //   ]
 // }
 // --- END PANTS LOCKFILE METADATA ---
@@ -24,6 +25,29 @@
   "locked_resolves": [
     {
       "locked_requirements": [
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
+              "hash": "1d2880b792ae8757289136f1db2b7b99100ce959b2aa57fd69dab783d05afac4",
+              "url": "https://files.pythonhosted.org/packages/af/6d/ea3a5c3027c3f14b0321cd4f7e594c776ebe64e4b927432ca6917512a4f7/asgiref-3.5.2-py3-none-any.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "4a29362a6acebe09bf1d6640db38c1dc3d9217c68e6f9f6204d72667fc19a424",
+              "url": "https://files.pythonhosted.org/packages/1f/35/e7d59b92ceffb1dc62c65156278de378670b46ab2364a3ea7216fe194ba3/asgiref-3.5.2.tar.gz"
+            }
+          ],
+          "project_name": "asgiref",
+          "requires_dists": [
+            "mypy>=0.800; extra == \"tests\"",
+            "pytest-asyncio; extra == \"tests\"",
+            "pytest; extra == \"tests\"",
+            "typing-extensions; python_version < \"3.8\""
+          ],
+          "requires_python": ">=3.7",
+          "version": "3.5.2"
+        },
         {
           "artifacts": [
             {
@@ -117,13 +141,34 @@
           "artifacts": [
             {
               "algorithm": "sha256",
-              "hash": "1208431ca90a8cca1a6b8af391bb53c1a2db74e5d1cef6ddced95d4b2062edc6",
-              "url": "https://files.pythonhosted.org/packages/92/f2/c48787ca7d1e20daa185e1b6b2d4e16acd2fb5e0320bc50ffc89b91fa4d7/importlib_metadata-4.11.3-py3-none-any.whl"
+              "hash": "8ddd78563b633ca55346c8cd41ec0af27d3c79931828beffb46ce70a379e7442",
+              "url": "https://files.pythonhosted.org/packages/19/d2/32a15a4955be1b8114a1c570999eefd31279c7f9aa2d2a43d492a79b53c5/h11-0.13.0-py3-none-any.whl"
             },
             {
               "algorithm": "sha256",
-              "hash": "ea4c597ebf37142f827b8f39299579e31685c31d3a438b59f469406afd0f2539",
-              "url": "https://files.pythonhosted.org/packages/3e/1d/964b27278cfa369fbe9041f604ab09c6e99556f8b7910781b4584b428c2f/importlib_metadata-4.11.3.tar.gz"
+              "hash": "70813c1135087a248a4d38cc0e1a0181ffab2188141a93eaf567940c3957ff06",
+              "url": "https://files.pythonhosted.org/packages/fa/a6/450568b2d62dd633be53f69890332bb0ce78183ffbe1e514c2b3102efff5/h11-0.13.0.tar.gz"
+            }
+          ],
+          "project_name": "h11",
+          "requires_dists": [
+            "dataclasses; python_version < \"3.7\"",
+            "typing-extensions; python_version < \"3.8\""
+          ],
+          "requires_python": ">=3.6",
+          "version": "0.13"
+        },
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
+              "hash": "c58c8eb8a762858f49e18436ff552e83914778e50e9d2f1660535ffb364552ec",
+              "url": "https://files.pythonhosted.org/packages/ab/b5/1bd220dd470b0b912fc31499e0d9c652007a60caf137995867ccc4b98cb6/importlib_metadata-4.11.4-py3-none-any.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "5d26852efe48c0a32b0509ffbc583fda1a2266545a78d104a6f4aff3db17d700",
+              "url": "https://files.pythonhosted.org/packages/35/a8/f2bd0d488c2bf932b4dda0fb91cbb687c0b1132b33130d1cfad4e2b4b963/importlib_metadata-4.11.4.tar.gz"
             }
           ],
           "project_name": "importlib-metadata",
@@ -148,7 +193,7 @@
             "zipp>=0.5"
           ],
           "requires_python": ">=3.7",
-          "version": "4.11.3"
+          "version": "4.11.4"
         },
         {
           "artifacts": [
@@ -316,6 +361,36 @@
           "artifacts": [
             {
               "algorithm": "sha256",
+              "hash": "19e2a0e96c9ac5581c01eb1a79a7d2f72bb479691acd2b8921fce48ed5b961a6",
+              "url": "https://files.pythonhosted.org/packages/36/ab/c13847c53d0624ee5a2e19c9c8d19a8cea5f865b95d08b839fac375a9e83/uvicorn-0.17.6-py3-none-any.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "5180f9d059611747d841a4a4c4ab675edf54c8489e97f96d0583ee90ac3bfc23",
+              "url": "https://files.pythonhosted.org/packages/6d/7d/b97c120cad5fd1f66462afb0d5ddd043078f2380b89fccd8a97ef5c95b5c/uvicorn-0.17.6.tar.gz"
+            }
+          ],
+          "project_name": "uvicorn",
+          "requires_dists": [
+            "PyYAML>=5.1; extra == \"standard\"",
+            "asgiref>=3.4.0",
+            "click>=7.0",
+            "colorama>=0.4; sys_platform == \"win32\" and extra == \"standard\"",
+            "h11>=0.8",
+            "httptools>=0.4.0; extra == \"standard\"",
+            "python-dotenv>=0.13; extra == \"standard\"",
+            "typing-extensions; python_version < \"3.8\"",
+            "uvloop!=0.15.0,!=0.15.1,>=0.14.0; (sys_platform != \"win32\" and (sys_platform != \"cygwin\" and platform_python_implementation != \"PyPy\")) and extra == \"standard\"",
+            "watchgod>=0.6; extra == \"standard\"",
+            "websockets>=10.0; extra == \"standard\""
+          ],
+          "requires_python": ">=3.7",
+          "version": "0.17.6"
+        },
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
               "hash": "72a4b735692dd3135217911cbeaa1be5fa3f62bffb8745c5215420a03dc55255",
               "url": "https://files.pythonhosted.org/packages/c4/44/f50f2d22cdfb6d56c03d1b4cc3cfa03ebee2f21b59a7768f151e43415ba5/Werkzeug-2.1.2-py3-none-any.whl"
             },
@@ -376,7 +451,8 @@
   "prefer_older_binary": false,
   "requirements": [
     "Flask>=2.1.0",
-    "gunicorn"
+    "gunicorn",
+    "uvicorn"
   ],
   "requires_python": [
     "==3.9.*"

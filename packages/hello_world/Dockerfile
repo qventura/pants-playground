@@ -3,6 +3,7 @@ FROM python:${PYTHON_VERSION}-slim
 
 WORKDIR /app
 
-COPY packages.hello_world/main.pex packages/hello_world/main.pex
+COPY packages.hello_world/manylinux.pex main.pex
 
-CMD ./packages/hello_world/main.pex packages.hello_world.main:app
+CMD ./main.pex hello_world.main:app --port 8000
+
