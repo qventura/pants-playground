@@ -17,3 +17,12 @@ docker_image(
     name="docker",
     repository="{name}",
 )
+
+
+google_cloud_run(
+    name="cloud_run",
+    registry="gcr.io",
+    image="test-repo/test-image",
+    dependencies=[":docker"],
+    tag="latest"
+)
