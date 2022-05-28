@@ -1,9 +1,10 @@
 [GLOBAL]
 pants_version = "2.11.0"
-
+pythonpath = ["%(buildroot)s/packages/pants-plugins"]
 backend_packages = [
     "pants.backend.python",
     "pants.backend.docker",
+    "google_cloud_run",
 ]
 
 [python]
@@ -16,3 +17,6 @@ root_patterns = ["/packages"]
 
 [docker]
 default_repository = "{parent_directory}/{name}"
+
+[anonymous-telemetry]
+enabled = false
