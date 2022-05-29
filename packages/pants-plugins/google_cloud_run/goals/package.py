@@ -6,6 +6,7 @@ from google_cloud_run.fields import (GoogleCloudRunDockerImageNameField,
                                      GoogleCloudRunDockerTag)
 
 from pants.core.goals.package import (BuiltPackage, PackageFieldSet)
+from pants.engine.internals.native_engine import EMPTY_DIGEST as EMPTY_DIGEST
 from pants.engine.rules import collect_rules, rule
 from pants.engine.unions import UnionRule
 from pants.util.logging import LogLevel
@@ -20,14 +21,11 @@ class PackageGoogleCloudRunServiceFieldSet(PackageFieldSet):
         GoogleCloudRunDockerTag,
     )
 
-
 @rule(level=LogLevel.DEBUG)
 async def package(field_set: PackageGoogleCloudRunServiceFieldSet) -> BuiltPackage:
-    logger.debug("Packaging...")
+    logger.info("Dummy Packaging for GoogleCloudRunService...")
 
-    # DO SOMETHING
-
-    return
+    return BuiltPackage(EMPTY_DIGEST, ())
 
 def rules():
     return [
