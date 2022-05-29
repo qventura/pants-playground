@@ -44,7 +44,7 @@ class PublishGoogleCloudRunServiceFieldSet(PublishFieldSet):
 async def google_cloud_run_publish(
     request: PublishGoogleCloudRunServiceRequest, gcloud: GCloudBinary
 ) -> PublishProcesses:
-    logger.info("request", request)
+    logger.debug("Publishing...")
 
     env = await Get(Environment, EnvironmentRequest(options.env_vars))
     jobs: list[PublishPackages] = []
